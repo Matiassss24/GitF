@@ -95,6 +95,7 @@ this.y += this.velocity;
 if(this.y >= height - s_fg.height - 10){
 this.y = height - s_fg.height - 10;
 if(currentstate === states.Game){
+die.currentTime = 0.22;
 die.play();
 currentstate = states.Score;
 
@@ -217,6 +218,7 @@ hover.play();
 }else{
 currentstate = states.Game;
 bird.jump();
+flap.currentTime = 0;
 flap.play();
 }
 break;
@@ -233,6 +235,7 @@ if(paubtn.x < mx2 && mx2 < paubtn.x + paubtn.width && paubtn.y < my2 && my2 < pa
 currentstate = states.Pause;
 hover.play();
 }
+flap.currentTime = 0;
 flap.play();
 bird.jump();
 break;
