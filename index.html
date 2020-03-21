@@ -44,7 +44,6 @@ menu = false,
 start = false,
 sepframe = 25.5,
 currentmedal = 0,
-currents = 0,
 hides = 0,
 smsong = new Audio("audio/sms.mp3"),
 piped = new Audio("audio/Dpipe.mp3"),
@@ -526,17 +525,45 @@ ctx.restore();
 }
 
 main();
-var z = setInterval(function(){
+setInterval(function(){
 width = window.innerWidth;
 height = window.innerHeight;
 canvas.width = width;
 canvas.height = height;
-currents++;
-if(currents === 1){
-clearInterval(z);
 ctx.fillStyle = s_bg.color;
+okbtn = {
+x: (width - s_buttons.Ok.width)/2 - 55,
+y: height - 200,
+width: s_buttons.Ok.width,
+height: s_buttons.Ok.height
 }
-}, 30);
+
+paubtn = {
+x: 25,
+y: 25,
+width: s_pauses.Pause.width,
+height: s_pauses.Pause.height
+}
+
+startbtn = {
+x: (width - s_buttons.Start.width)/2 - 55,
+y: height - 200,
+width: s_buttons.Start.width,
+height: s_buttons.Start.height
+}
+
+scorebtn = {
+x: (width - s_buttons.Score.width)/2 + 55,
+y: height - 200,
+}
+
+menubtn = {
+x: (width - s_buttons.Menu.width)/2 + 55,
+y: height - 200,
+width: s_buttons.Menu.width,
+height: s_buttons.Menu.height
+}
+});
 </script>
 </body>
 </html>
