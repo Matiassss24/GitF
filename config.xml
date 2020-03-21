@@ -9,7 +9,7 @@
 <author href = "" email = "">
 Matiasss24
 </author>
-<preference name = "orientation" value = "Portrait" />
+<preference name = "Orientation" value = "Portrait" />
 <preferent name = "Fullscreen" value = "true" />
 <icon src = "res/icon.png" />
 </widget>
